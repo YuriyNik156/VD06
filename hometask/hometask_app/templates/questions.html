@@ -43,10 +43,14 @@
     <h2 class="mb-4">Ваша анкета:</h2>
     {% for query in queries %}
     <div class="card mb-3">
-        <div class="card-body">
-            <h4 class="card-title">{{ query.title }}</h4>
-            <p class="card-text">{{ query.content }}</p>
-        </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ query.name }} ({{ query.age }} лет)</h5>
+        <p class="card-text">
+            <strong>Город:</strong> {{ query.city }}<br>
+            <strong>Хобби:</strong> {{ query.hobby }}<br>
+            <strong>Любимое блюдо:</strong> {{ query.dish }}
+        </p>
+    </div>
     </div>
     {% endfor %}
 </div>
